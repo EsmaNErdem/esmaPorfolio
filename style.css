@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 70%;
+  }
+}
+  
+  /* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 65%;
+  }
+}
+/*NAVBAR SECTION*/
+.navbarsec {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  min-height: 70px;
+  padding: 1rem;
+  z-index: 10000;
+  background-color: #fff;
+  color: #000;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.navbarsec .container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  letter-spacing: 3px;
+}
+
+.navbarsec a:link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.navbarsec a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list ul {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 1px;
+}
+
+.nav-list li {
+  margin: 0 20px;
+  padding: 10px;
+}
+
+li a:hover {
+  font-weight: 900;
+  letter-spacing: 0.15rem;
+}
+
+@media (max-width: 500px) {
+  .navbarsec .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-list ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-list li {
+    padding: 2px;
+    margin: 0;
+  }
+}
+
+/*WELCOME SECTION*/
+
+#welcome-section{
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.35);
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.text{
+  position: relative;
+  z-index: 5;
+  color: #fff;
+  padding-right: 100px;
+  padding-left: 60%;
+  padding-top: 500px;
+}
+
+.text h1 {
+  font-size: 2em;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px){
+  .text {
+    padding: 1.20rem;
+    margin-left: 12rem;
+    padding-top: 40rem;
+  }
+}
+
+/*BIO*/
+
+#about {
+  width: 100%;
+  height: 100vh;
+  padding: 10rem;
+  margin: 0;
+}
+
+.me {
+  padding: 50px 0;
+  width: 100%;
+}
+
+h3, h4, h5 {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+h4{
+  border-bottom: 0.2rem solid black;
+}
+  
+h5 {
+  padding-top: 50px;
+  font-size: 2.5em;
+}
+
+.me p {
+  font-size: 1.2em;
+  margin: 1.5rem 0;
+  font-weight: 800;
+  width: 100%;
+}
+
+@media (max-width: 500px){
+  #about {
+    padding: 12rem 3rem;
+  }
+}
+
+/* PROJECT*/
+#projects {
+  width: 100%;
+  height: auto;
+  padding: 10rem;
+  margin: 0;
+}
+
+.work {
+  width: 100%;
+}
+
+.work h4 {
+  border-bottom: 0.2rem solid black;
+}
+
+.project-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  grid-gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+.project-image {
+  display: inline;
+  height: 420px;
+  width: 100%;
+  padding:10px;
+  object-fit: cover;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.imgfill {
+  object-fit: fill;
+}
+
+.project-title{
+  margin: 0;
+  padding: 10px;
+  height: 50px;
+  font-size: 1.1em;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.projects-grid a{
+  text-decoration: none;
+}
+
+.projects-grid a:hover {
+  font-weight: 900;
+  transform: translateX(3px)
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn a {
+  width: 200px;
+  margin: 20px;
+  padding: 10px 30px;
+  border-radius: 3px;
+  background: #000;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn a:hover {
+  font-weight: 900;
+  transform: translateX(3px)
+}
+
+.btn a:hover > span {
+  transform: translateX(3px);
+}
+  
+@media (max-width: 500px) {
+  #projects{
+    padding: 12rem 3rem;
+  }
+}
+
+/* CONTACT*/
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  padding: 10rem;
+  margin: 0;
+}
+
+.contact-header {
+  padding: 50px 0;
+}
+
+.contact-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+.contact-details {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1em;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+
+.contact-details p{
+  font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+  #contact{
+    padding: 12rem 3rem;
+  }
+
+  .contact-links{
+    flex-direction: column;
+  }
+}
+
+/*FOOTER*/
+footer{
+  background: #000;
+  color: white;
+  font-weight: 800;
+}
+
+/*GLITCH EFFECT*/
+/*FOUND ON INTERNET I DIDN'T WRITE THE GLITCH EFFECT CSS CODE MYSELF*/
+
+.glitch{
+  animation: glitch 1s linear infinite;
+}
+  
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.glitch:before,
+.glitch:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.glitch:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.glitch:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+
+
+
