@@ -345,11 +345,13 @@ h5 {
 
 @media (max-width: 500px) {
   #contact{
-    padding: 12rem 3rem;
+    padding: 8rem 3rem;
   }
 
   .contact-links{
     flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
 }
 
