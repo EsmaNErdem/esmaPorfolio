@@ -364,6 +364,7 @@ footer{
 
 /*GLITCH EFFECT*/
 /*FOUND ON INTERNET I DIDN'T WRITE THE GLITCH EFFECT CSS CODE MYSELF*/
+/*Credits: Thank you, Piotr Galor. https://codepen.io/pgalor/pen/OeRWJQ */
 
 .glitch{
   animation: glitch 1s linear infinite;
