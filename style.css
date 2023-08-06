@@ -45,6 +45,7 @@ html {
   color: #000;
   font-weight: 900;
   font-size: 20px;
+  border-bottom: 0.2rem solid black;
 }
 
 .navbarsec .container {
@@ -154,7 +155,6 @@ video {
 }
 
 /*BIO*/
-
 #about {
   width: 100%;
   height: 100vh;
@@ -167,38 +167,41 @@ video {
   width: 100%;
 }
 
+.summary {
+  width: 90%;
+  margin: 5px auto;
+  padding: 10px;
+}
+
 h3, h4, h5 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 900;
   line-height: 1em;
 }
 
-h4{
+h4 {
   border-bottom: 0.2rem solid black;
 }
-  
+
 h5 {
-  padding-top: 50px;
-  font-size: 2.5em;
+  padding-top: 20px;
+  font-size: 1.5rem;
 }
 
 .me p {
-  font-size: 1.2em;
-  margin: 1.5rem 0;
-  font-weight: 800;
-  width: 100%;
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   #about {
     padding: 12rem 3rem;
   }
 }
 
-/* PROJECT*/
+/* PROJECT */
 #projects {
   width: 100%;
-  height: auto;
   padding: 10rem;
   margin: 0;
 }
@@ -211,12 +214,10 @@ h5 {
   border-bottom: 0.2rem solid black;
 }
 
-
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
   grid-gap: 15px;
-  width: 100%;
   max-width: 1200px;
   margin: 30px auto;
   padding: 15px;
@@ -224,9 +225,9 @@ h5 {
 
 .project-image {
   display: inline;
-  height: 420px;
+  height: 250px;
   width: 100%;
-  padding:10px;
+  padding: 3px;
   object-fit: cover;
   background-color: #000;
   border-radius: 3px;
@@ -236,7 +237,7 @@ h5 {
   object-fit: fill;
 }
 
-.project-title{
+.project-title {
   margin: 0;
   padding: 10px;
   height: 50px;
@@ -251,13 +252,14 @@ h5 {
   justify-content: space-around;
 }
 
-.projects-grid a{
+.projects-grid a {
   text-decoration: none;
 }
 
 .projects-grid a:hover {
   font-weight: 900;
-  transform: translateX(3px)
+  transform: translateX(3px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -283,24 +285,26 @@ h5 {
 
 .btn a:hover {
   font-weight: 900;
-  transform: translateX(3px)
+  transform: translateX(3px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
 }
 
 .btn a:hover > span {
   transform: translateX(3px);
 }
-  
+
 @media (max-width: 500px) {
-  #projects{
+  #projects {
     padding: 13rem 3rem;
   }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  }
   .project-image {
-    display: block;
-    height: 250px;
-    width: 100%;
-    object-fit: scale-down;
+    height: 200px;
   }
 }
+
 
 /* CONTACT*/
 
@@ -337,10 +341,12 @@ h5 {
   justify-content: flex-start;
 }
 
-
-
 .contact-details p{
   font-size: 1rem;
+}
+
+.contact-details:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 500px) {
